@@ -20,3 +20,14 @@ test("Generator: cwd", () => {
     expect(cwd).toContain('tsg-js');
     expect(endsWell).toBe(true);
 });
+
+test("Generator: generate console app package.json", () => {
+    let g = new Generator();
+    let obj = g.readJsonObjectFile('package.json');
+    obj['name'] = 'console_app';
+    obj['description'] = 'console app using tsg-js';
+    obj['dependencies']['tsg-js'] = util.format('file:../tsg-js-%s.tgz', obj['version']);
+    expect(Object.keys(obj).length).toBeGreaterThan(6);
+    expect(Object.keys(obj).length).toBeLessThan(20);
+    g.writeTextFileSync('console_app/package.json', JSON.stringify(obj, null, 4));
+});
