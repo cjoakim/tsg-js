@@ -1,6 +1,6 @@
 {
     "name": "tsg-js",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "TypeScript code and project generator",
     "homepage": "https://github.com/cjoakim/tsg-js",
     "main": "dist/index.js",
