@@ -27,12 +27,12 @@
     "author": "Chris Joakim",
     "license": "MIT",
     "dependencies": {
-        "uuid": "^9.0.1"
+        "commander": "^11.1.0",
+        "figlet": "^1.7.0"
     },
     "devDependencies": {
         "@types/jest": "^29.5.4",
         "@types/node": "^18.17.1",
-        "@types/uuid": "9.0.4",
         "jest": "^29.7.0",
         "rimraf": "5.0.5",
         "ts-jest": "^29.1.1",

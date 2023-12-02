@@ -1,14 +1,14 @@
 /**
- * Utility class for local filesystem operations.
  * 
- * To read huge text files, consider using a line-by-line streaming approach
- * in your application code rather than using this class.
- * Chris Joakim, Microsoft, 2023
+ * Chris Joakim, 2023
  */
 
 import fs from "fs";
 import os from "os";
 import path from "path";
+import util from "util";
+
+import { exec } from "child_process";
 
 export class Generator {
     
@@ -21,6 +21,37 @@ export class Generator {
      */
     cwd() : string {
         return process.cwd();
+    }
+
+    /**
+     * List the files in the source directory.
+     */
+    listSourceDir() : void {
+        let dir = this.getSourceDir();
+        console.log(util.format('listSourceDir: %s', dir));
+        // let files : Array<string> = this.listFilesInDir(dir);
+        // for (let i = 0; i < files.length; i++) {
+        //     console.log(files[i]);
+        // }
+
+        let command = util.format('ls -al %s', dir);
+        console.log(util.format('command: %s', command));
+        exec(command, (error, stdout, stderr) => {
+            console.log(stdout);
+        });
+    }
+
+    getSourceDir() : string {
+        let tsconfig = this.getTsConfig();
+        return tsconfig['compilerOptions']['rootDir'];
+    }
+
+    getTsConfig() {
+        return this.readJsonObjectFile('tsconfig.json');
+    }
+
+    getPackageJson() {
+        return this.readJsonObjectFile('package.json');
     }
 
     /**

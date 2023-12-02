@@ -3,4 +3,38 @@
  * Chris Joakim,  2023
  */
 
-console.log('pre-alpha release');
+import fs from "fs";
+import os from "os";
+import path from "path";
+import util from "util";
+
+const figlet = require("figlet");
+
+import { Generator } from "./Generator";
+
+let func = process.argv[2];
+let gen  = new Generator();
+
+console.log(figlet.textSync('TSG-js'));
+
+switch (func) {
+    case "lsrc":
+        gen.listSourceDir();
+        break;
+    default:
+        displayCommandLineExamples();
+        break;
+}
+
+
+function displayCommandLineExamples() {
+    console.log('displayCommandLineExamples() - TODO - implement');
+    // console.log("node .\\dist\\index.js config");
+    // console.log("node .\\dist\\index.js files");
+    // console.log("node .\\dist\\index.js storage");
+    // console.log("node .\\dist\\index.js cosmos_nosql");
+    // console.log("node .\\dist\\index.js cosmos_mongo");
+    // console.log("node .\\dist\\index.js cosmos_pg");
+    // console.log("node .\\dist\\index.js embeddings");
+    // console.log('');
+}
