@@ -8,3 +8,6 @@ TypeScript code and project generator.
 | ------- | ---------- | --------------------------------------------------------------- |
 |  0.0.2  | 2023/12/01 | Pre-Alpha                                                       |
 |  0.0.1  | 2023/12/01 | Pre-Alpha, create library on npmjs.org                          |
+
+
+
