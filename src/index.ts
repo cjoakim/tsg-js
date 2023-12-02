@@ -15,8 +15,6 @@ import { Generator } from "./Generator";
 let func = process.argv[2];
 let gen  = new Generator();
 
-console.log(figlet.textSync('TSG-js'));
-
 switch (func) {
     case "lsrc":
         gen.listSourceDir();
@@ -24,13 +22,19 @@ switch (func) {
     case "ldist":
         gen.listDistDir();
         break;
+    case "genclass":
+        gen.genClass();
+        break;
+    case "gentest":
+        gen.genTest();
+        break;
     default:
         displayCommandLineExamples();
         break;
 }
 
-
 function displayCommandLineExamples() {
+    console.log(figlet.textSync('TSG-js'));
     console.log('displayCommandLineExamples() - TODO - implement');
     // console.log("node .\\dist\\index.js config");
     // console.log("node .\\dist\\index.js files");
