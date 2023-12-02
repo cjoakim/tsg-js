@@ -21,11 +21,13 @@ export class Generator {
         this.fu = new FileUtil();
     }
 
-    /**
-     * List the files in the source directory.
-     */
     listSourceDir() : void {
         let dir = this.getSourceDir();
+        this.listDir(dir);
+    }
+
+    listDistDir() : void {
+        let dir = this.getDistDir();
         this.listDir(dir);
     }
 
@@ -43,6 +45,11 @@ export class Generator {
     getSourceDir() : string {
         let tsconfig = this.getTsConfig();
         return tsconfig['compilerOptions']['rootDir'];
+    }
+
+    getDistDir() : string {
+        let tsconfig = this.getTsConfig();
+        return tsconfig['compilerOptions']['outDir'];
     }
 
     getTsConfig() {

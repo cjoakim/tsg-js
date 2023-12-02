@@ -21,6 +21,9 @@ switch (func) {
     case "lsrc":
         gen.listSourceDir();
         break;
+    case "ldist":
+        gen.listDistDir();
+        break;
     default:
         displayCommandLineExamples();
         break;
