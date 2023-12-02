@@ -1,16 +1,13 @@
-// Unit tests for class FileUtil
-// Chris Joakim, Microsoft, 2023
+/**
+ * Unit tests for class Generator
+ * Chris Joakim
+ */
 
 // npm test --testPathPattern Generator
 
-import path from "path";
 import util from "util";
 
 import { Generator } from "./Generator";
-
-function epochTime() : number {
-    return Date.now().valueOf();
-}
 
 test("Generator: generate console app package.json", () => {
     let g = new Generator();

@@ -34,9 +34,11 @@ export class Generator {
     genClass() : void {
         let dir = this.getSourceDir();
         let cname = process.argv[3];
+        let author = this.getPackageAuthor();
         let outfile = util.format('%s/%s.ts', dir, cname);
 
-        let content = '// ' + cname;
+        let template = this.classTemplate();
+        let content = util.format(template, author, cname);
 
         this.fu.writeTextFileSync(outfile, content);
         console.log(util.format('file written: %s', outfile));
@@ -54,9 +56,12 @@ export class Generator {
     genTest() : void {
         let dir = this.getSourceDir();
         let cname = process.argv[3];
+        let author = this.getPackageAuthor();
         let outfile = util.format('%s/%s.test.ts', dir, cname);
 
-        let content = '// ' + cname;
+        let template = this.testTemplate();
+        let content = util.format(
+            template, cname, author, cname, cname, cname, cname, cname);
 
         this.fu.writeTextFileSync(outfile, content);
         console.log(util.format('file written: %s', outfile));
@@ -120,5 +125,53 @@ export class Generator {
         }
         return false;
     }
+
+    classTemplate() : string {
+
+        return `
+/**
+ * 
+ * %s
+ */
+
+import fs from "fs";
+import os from "os";
+import path from "path";
+import util from "util";
+
+// import { YourClass } from "./YourClass";
+
+export class %s {
+
+    constructor() {
+
+    }
+
+    someMethod() : string {
+        return 'some value';
+    }
+}
+`.trimLeft();
+    }
+
+    testTemplate() : string {
+
+        return `
+/**
+ * Unit tests for class %s
+ * %s
+ */
+
+// npm test --testPathPattern %s
+
+import util from "util";
+
+import { %s } from "./%s";
+
+test("%s: test xxx", () => {
+    let tested = new %s();
+    expect(tested.someMethod()).toBe('some value');
+});    
+`.trimLeft();    }
 
 }

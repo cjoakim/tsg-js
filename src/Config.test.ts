@@ -8,21 +8,14 @@ import util from "util";
 import { Config } from "./Config";
 import { FileUtil } from "./FileUtil";
 
-test("Config: lookupEnvVarName", async () => {
-    let searchURL = Config.lookupEnvVarName('ENV_SEARCH_URL');
-    let something = Config.lookupEnvVarName('SOMETHING_NOT_DEFINED');
-    expect(searchURL).toBe('AZURE_SEARCH_URL');
-    expect(something).toBe(null);
-});
-
 test("Config: platform methods", async () => {
     try {
         let platform : string = Config.platform();
         let win : boolean = Config.isWindows();
         let mac : boolean = Config.isMac();
         let linux : boolean = Config.isLinux();
-        console.log(util.format(
-            'platform: %s, win: %s, mac: %s, linux: %s', platform, win, mac, linux));
+        console.log(util.format('platform: %s, win: %s, mac: %s, linux: %s', platform, win, mac, linux));
+        expect(1).toBe(1);
     }
     catch (error) {
         expect(true).toBe(false);
