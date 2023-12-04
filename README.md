@@ -52,6 +52,27 @@ Unstall tsg-js either globally, or local to your project.
 > npx tsg ldist
 ```
 
+#### Complete example of output
+
+```
+$ npx tsg
+  _____ ____   ____       _
+ |_   _/ ___| / ___|     (_)___
+   | | \___ \| |  _ _____| / __|
+   | |  ___) | |_| |_____| \__ \
+   |_| |____/ \____|    _/ |___/
+                       |__/
+  version: 0.0.3
+--------------------------------------------------------------------
+ npx tsg genclass SomeClass      # generate a class file
+ npx tsg genclass SomeClass -t   # generate class and test files
+ npx tsg gentest SomeClass       # generate a test file
+ npx tsg genjest                 # generate a Jest config file
+ npx tsg lsrc                    # list the TS source directory
+ npx tsg ldist                   # list the TS transpiled directory
+
+```
+
 ### Version History
 
 | Version |    Date    | Changes                                                         |
