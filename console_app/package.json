@@ -4,6 +4,9 @@
     "description": "console app using tsg-js",
     "homepage": "https://github.com/cjoakim/tsg-js",
     "main": "dist/index.js",
+    "bin": {
+        "tsg": "./dist/index.js"
+    },
     "types": "dist/index.d.ts",
     "engines": {
         "node": ">=18.7.0"

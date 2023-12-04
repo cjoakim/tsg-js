@@ -1,5 +1,7 @@
+#!/usr/bin/env node
+
 /**
- * 
+ * Entry point for tsg-js.
  * Chris Joakim,  2023
  */
 
@@ -38,13 +40,13 @@ switch (func) {
 
 function displayCommandLineExamples() {
     console.log(figlet.textSync('TSG-js'));
-    console.log('displayCommandLineExamples() - TODO - implement');
-    // console.log("node .\\dist\\index.js config");
-    // console.log("node .\\dist\\index.js files");
-    // console.log("node .\\dist\\index.js storage");
-    // console.log("node .\\dist\\index.js cosmos_nosql");
-    // console.log("node .\\dist\\index.js cosmos_mongo");
-    // console.log("node .\\dist\\index.js cosmos_pg");
-    // console.log("node .\\dist\\index.js embeddings");
-    // console.log('');
+    console.log(util.format('  version: %s', gen.getPackageVersion()))
+    console.log('--------------------------------------------------------------------');
+    console.log(' npx tsg genclass SomeClass      # generate a class file');
+    console.log(' npx tsg genclass SomeClass -t   # generate class and test files');
+    console.log(' npx tsg gentest SomeClass       # generate a test file');
+    console.log(' npx tsg genjest                 # generate a Jest config file');
+    console.log(' npx tsg lsrc                    # list the TS source directory');
+    console.log(' npx tsg ldist                   # list the TS transpiled directory');
+    console.log('');
 }

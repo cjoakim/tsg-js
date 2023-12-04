@@ -1,9 +1,12 @@
 {
     "name": "tsg-js",
     "version": "0.0.3",
-    "description": "TypeScript code and project generator",
+    "description": "TypeScript code generator",
     "homepage": "https://github.com/cjoakim/tsg-js",
     "main": "dist/index.js",
+    "bin": {
+      "tsg": "./dist/index.js"
+    },
     "types": "dist/index.d.ts",
     "engines": {
         "node": ">=18.7.0"

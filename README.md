@@ -19,37 +19,37 @@ Unstall tsg-js either globally, or local to your project.
 #### Generate a TypeScript class in your source directory, per tsconfig.js location.
 
 ```
-> tsg genclass SomeClass
+> npx tsg genclass SomeClass
 ```
 
 #### Generate a TypeScript class and corresponding unit test.  Assumes the use of Jest.
 
 ```
-> tsg genclass SomeClass -t
+> npx tsg genclass SomeClass -t
 ```
 
 #### Generate a TypeScript unit test.  Assumes the use of Jest.
 
 ```
-> tsg gentest SomeClass -t
+> npx tsg gentest SomeClass -t
 ```
 
 #### Generate a Jest Config File.
 
 ```
-> tsg genjest
+> npx tsg genjest
 ```
 
 #### List the contents of your source directory, per tsconfig.js location.
 
 ```
-> tsg lsrc
+> npx tsg lsrc
 ```
 
 #### List the contents of your transpiled outputed directory, per tsconfig.js location.
 
 ```
-> tsg ldist
+> npx tsg ldist
 ```
 
 ### Version History
@@ -59,6 +59,3 @@ Unstall tsg-js either globally, or local to your project.
 |  0.0.3  | 2023/12/04 | Alpha                                                       |
 |  0.0.2  | 2023/12/01 | Pre-Alpha                                                       |
 |  0.0.1  | 2023/12/01 | Pre-Alpha, create library on npmjs.org                          |
-
-
-

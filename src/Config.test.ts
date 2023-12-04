@@ -38,7 +38,7 @@ test("Config: ensure version number consistency", async () => {
     }); 
     expect(pkgVersion).toBe('0.0.3');
     expect(pkgVersion).toBe(Config.LIB_VERSION);
-    expect(readmeLines.length).toBeGreaterThan(10);
-    expect(readmeLines.length).toBeLessThan(60);
+    expect(readmeLines.length).toBeGreaterThan(60);
+    expect(readmeLines.length).toBeLessThan(100);
     //expect(expectedReadmeLineFound).toBe(true);
 });
