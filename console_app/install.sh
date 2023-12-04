@@ -8,12 +8,12 @@ rm -rf ./node_modules
 rm package-lock.json
 
 mkdir -p ./node_modules
-mkdir -p ./tmp
 
 npm unlink tsg-js
 
 npm install
 
-#npm install ../tsg-js-0.1.0.tgz
+npm install ../tsg-js-0.1.0.tgz
 
 npm list
+        
