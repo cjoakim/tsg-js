@@ -20,6 +20,10 @@ export class Generator {
         this.fu = new FileUtil();
     }
 
+    static version() : string {
+        return '0.1.1';
+    }
+
     listSourceDir() : void {
         let dir = this.getSourceDir();
         this.listDir(dir);

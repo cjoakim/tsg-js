@@ -13,7 +13,7 @@ npm unlink tsg-js
 
 npm install
 
-npm install ../tsg-js-0.1.0.tgz
+npm install ../tsg-js-0.1.1.tgz
 
 npm list
         

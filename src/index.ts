@@ -43,7 +43,7 @@ switch (func) {
 
 function displayCommandLineExamples() {
     console.log(figlet.textSync('TSG-js'));
-    console.log(util.format('  version: %s', gen.getPackageVersion()))
+    console.log(util.format('  version: %s', Generator.version()));
     console.log('--------------------------------------------------------------------');
     console.log('npx tsg genclass SomeClass      # generate a class file');
     console.log('npx tsg genclass SomeClass -t   # generate class and test files');

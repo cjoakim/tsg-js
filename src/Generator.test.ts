@@ -9,6 +9,14 @@ import util from "util";
 
 import { Generator } from "./Generator";
 
+test("Generator: ensure version", () => {
+    let g = new Generator();
+    let obj = g.fu.readJsonObjectFile('package.json');
+    let pkgVersion : string = obj['version'];
+    let codeVersion : string = Generator.version();
+    expect(pkgVersion).toBe(codeVersion);
+});
+
 test("Generator: generate console app package.json", () => {
     let g = new Generator();
     let obj = g.fu.readJsonObjectFile('package.json');

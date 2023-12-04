@@ -91,14 +91,14 @@ drwxr-xr-x@ 15 cjoakim  staff  480 Dec  4 11:40 ..
 #### Complete example of output
 
 ```
-> npx tsg
+$ npx tsg
   _____ ____   ____       _
  |_   _/ ___| / ___|     (_)___
    | | \___ \| |  _ _____| / __|
    | |  ___) | |_| |_____| \__ \
    |_| |____/ \____|    _/ |___/
                        |__/
-  version: 0.1.0
+  version: 0.1.1
 --------------------------------------------------------------------
 npx tsg genclass SomeClass      # generate a class file
 npx tsg genclass SomeClass -t   # generate class and test files
@@ -112,6 +112,7 @@ npx tsg ldist                   # list the TS transpiled directory
 
 | Version |    Date    | Changes                                                         |
 | ------- | ---------- | --------------------------------------------------------------- |
+|  0.1.1  | 2023/12/04 | Beta 2                                                          |
 |  0.1.0  | 2023/12/04 | Beta 1                                                          |
 |  0.0.2  | 2023/12/01 | Pre-Alpha                                                       |
 |  0.0.1  | 2023/12/01 | Pre-Alpha, create library on npmjs.org                          |
