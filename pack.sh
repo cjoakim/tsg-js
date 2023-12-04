@@ -4,7 +4,7 @@
 # The packaged tsg-js-n.n.n.tgz file is tested in the examples/
 # directory before doing an actual 'npm publish'.
 #
-# Chris Joakim, Microsoft, 2023
+# Chris Joakim, 2023
 
 rm *.tgz
 

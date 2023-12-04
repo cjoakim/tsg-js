@@ -1,7 +1,7 @@
 
 # PowerShell script to compile and unit-test this app.
 #
-# Chris Joakim, Microsoft, 2023
+# Chris Joakim, 2023
 
 del tmp\*.*
 

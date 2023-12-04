@@ -3,7 +3,7 @@
  * 
  * To read huge text files, consider using a line-by-line streaming approach
  * in your application code rather than using this class.
- * Chris Joakim, Microsoft, 2023
+ * Chris Joakim, 2023
  */
 
 import fs from "fs";

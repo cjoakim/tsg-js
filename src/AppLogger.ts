@@ -7,7 +7,7 @@
  * in the azu-js package.  Each azj-js class is assigned a default
  * logger in the constructor, but this value can be reassigned as needed.
  * 
- * Chris Joakim, Microsoft, 2023
+ * Chris Joakim, 2023
  */
 
 import os from "os";
