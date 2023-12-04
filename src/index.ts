@@ -33,6 +33,9 @@ switch (func) {
     case "gentest":
         gen.genTest();
         break;
+    case "genjest":
+        gen.genJest();
+        break;
     default:
         displayCommandLineExamples();
         break;

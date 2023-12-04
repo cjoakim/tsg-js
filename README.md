@@ -62,7 +62,7 @@ $ npx tsg
    | |  ___) | |_| |_____| \__ \
    |_| |____/ \____|    _/ |___/
                        |__/
-  version: 0.0.3
+  version: 0.1.0
 --------------------------------------------------------------------
  npx tsg genclass SomeClass      # generate a class file
  npx tsg genclass SomeClass -t   # generate class and test files
@@ -77,6 +77,6 @@ $ npx tsg
 
 | Version |    Date    | Changes                                                         |
 | ------- | ---------- | --------------------------------------------------------------- |
-|  0.0.3  | 2023/12/04 | Alpha                                                       |
+|  0.1.0  | 2023/12/04 | Beta 1                                                          |
 |  0.0.2  | 2023/12/01 | Pre-Alpha                                                       |
 |  0.0.1  | 2023/12/01 | Pre-Alpha, create library on npmjs.org                          |

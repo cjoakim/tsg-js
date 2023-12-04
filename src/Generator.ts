@@ -10,7 +10,6 @@ import util from "util";
 
 import { exec } from "child_process";
 
-import { Config } from "./Config";
 import { FileUtil } from "./FileUtil";
 
 export class Generator {
@@ -71,11 +70,21 @@ export class Generator {
         }
     }
 
+    genJest() : void {
+        let dir = process.cwd();
+        let outfile = util.format('%s/jest.config.js', dir);
+
+        let content = this.jestTemplate();
+
+        this.fu.writeTextFileSync(outfile, content);
+        console.log(util.format('file written: %s', outfile));
+    }
+
     // ========== api methods above; private methods below ==========
 
     listDir(dir : string) : void {
         let command = util.format('ls -al %s', dir);
-        if  (Config.isWindows()) {
+        if  (this.isWindows()) {
             command = util.format('dir %s', dir);
         }
         console.log(util.format('command: %s', command));
@@ -115,6 +124,41 @@ export class Generator {
 
     getPackageJson() {
         return this.fu.readJsonObjectFile('package.json');
+    }
+
+    /**
+     * Return the name of the platform where this node.js process is running.
+     * Possible values are 'aix', 'darwin', 'freebsd', 'linux', 'openbsd', 'sunos', and 'win32'.
+     */
+    platform() : string {
+        return os.platform();
+    }
+
+    /**
+     * Return true if the current platform is Windows, else return false. 
+     */
+    isWindows() : boolean {
+        let p : string = os.platform().toLowerCase();
+        if (this.isMac()) {
+            return false;  // 'darwin' contains 'win'!
+        }
+        return p.includes('win');
+    }
+
+    /**
+     * Return true if the current platform is Apple macOS, else return false. 
+     */
+    isMac() : boolean {
+        let p : string = os.platform().toLowerCase();
+        return p.includes('darwin');
+    }
+
+    /**
+     * Return true if the current platform is Linux, else return false. 
+     */
+    isLinux() : boolean {
+        let p : string = os.platform().toLowerCase();
+        return p.includes('linux');
     }
 
     cliArgPresent(flag: string) : boolean {
@@ -172,6 +216,18 @@ test("%s: test xxx", () => {
     let tested = new %s();
     expect(tested.someMethod()).toBe('some value');
 });    
-`.trimLeft();    }
+`.trimLeft();
+}
 
+    jestTemplate() {
+        return `
+module.exports = {
+    "roots": ["src"],
+    "transform": {"^.+\\.tsx?$": "ts-jest"},
+    collectCoverage: true,
+    coverageDirectory: 'coverage',
+    slowTestThreshold: 10
+}
+`.trimLeft();
+    }
 }
