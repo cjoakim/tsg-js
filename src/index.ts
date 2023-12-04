@@ -3,6 +3,9 @@
  * Chris Joakim,  2023
  */
 
+// This article was helpful to the development of tsg-js:
+// https://blog.logrocket.com/building-typescript-cli-node-js-commander/
+
 import fs from "fs";
 import os from "os";
 import path from "path";
