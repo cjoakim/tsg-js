@@ -17,5 +17,7 @@ test("Generator: generate console app package.json", () => {
     obj['dependencies']['tsg-js'] = util.format('file:../tsg-js-%s.tgz', obj['version']);
     expect(Object.keys(obj).length).toBeGreaterThan(6);
     expect(Object.keys(obj).length).toBeLessThan(20);
-    g.fu.writeTextFileSync('console_app/package.json', JSON.stringify(obj, null, 4));
+    let outfile = 'console_app/package.json';
+    g.fu.writeTextFileSync(outfile, JSON.stringify(obj, null, 4));
+    console.log(util.format('file written: %s', outfile));
 });

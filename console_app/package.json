@@ -31,8 +31,8 @@
     "license": "MIT",
     "dependencies": {
         "figlet": "^1.7.0",
-        "winston": "^3.11.0",
-        "tsg-js": "file:../tsg-js-0.1.0.tgz"
+        "tsg-js": "file:../tsg-js-0.1.0.tgz",
+        "winston": "^3.11.0"
     },
     "devDependencies": {
         "@types/jest": "^29.5.4",

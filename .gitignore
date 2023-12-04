@@ -8,6 +8,9 @@
 **/npm_pack.txt
 **/package-lock.json
 
+console_app/jest.config.js
+console_app/src/
+
 # -----------------------------------------------------------------------------
 
 # Logs

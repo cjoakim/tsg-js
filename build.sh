@@ -6,6 +6,10 @@
 
 rm tmp/*.*
 
+npm uninstall -g tsg-js
+
+rm  tsg-*.tgz
+
 npm run build
 
 npm run test

@@ -5,6 +5,10 @@
 
 del tmp\*.*
 
+npm uninstall -g tsg-js
+
+del tsg-*.tgz
+
 npm run build
 
 npm run test

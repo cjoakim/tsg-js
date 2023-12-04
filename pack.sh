@@ -6,13 +6,13 @@
 #
 # Chris Joakim, 2023
 
-rm *.tgz
+rm  *.tgz
 
 npm run build
 
 npm run test
 
-rm dist/*test*
+rm  dist/*test*
 
 npm pack > npm_pack.txt
 
