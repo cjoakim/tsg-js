@@ -45,11 +45,11 @@ function displayCommandLineExamples() {
     console.log(figlet.textSync('TSG-js'));
     console.log(util.format('  version: %s', gen.getPackageVersion()))
     console.log('--------------------------------------------------------------------');
-    console.log(' npx tsg genclass SomeClass      # generate a class file');
-    console.log(' npx tsg genclass SomeClass -t   # generate class and test files');
-    console.log(' npx tsg gentest SomeClass       # generate a test file');
-    console.log(' npx tsg genjest                 # generate a Jest config file');
-    console.log(' npx tsg lsrc                    # list the TS source directory');
-    console.log(' npx tsg ldist                   # list the TS transpiled directory');
+    console.log('npx tsg genclass SomeClass      # generate a class file');
+    console.log('npx tsg genclass SomeClass -t   # generate class and test files');
+    console.log('npx tsg gentest SomeClass       # generate a test file');
+    console.log('npx tsg genjest                 # generate a Jest config file');
+    console.log('npx tsg lsrc                    # list the TS source directory');
+    console.log('npx tsg ldist                   # list the TS transpiled directory');
     console.log('');
 }
