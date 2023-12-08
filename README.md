@@ -112,6 +112,7 @@ npx tsg ldist                   # list the TS transpiled directory
 
 | Version |    Date    | Changes                                                         |
 | ------- | ---------- | --------------------------------------------------------------- |
+|  1.0.0  | 2023/12/08 | First GA release; tested on macOS 14/Sonoma and Windows 11      |
 |  0.1.1  | 2023/12/04 | Beta 2                                                          |
 |  0.1.0  | 2023/12/04 | Beta 1                                                          |
 |  0.0.2  | 2023/12/01 | Pre-Alpha                                                       |

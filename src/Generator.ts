@@ -21,7 +21,7 @@ export class Generator {
     }
 
     static version() : string {
-        return '0.1.1';
+        return '1.0.0';
     }
 
     listSourceDir() : void {
